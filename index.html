@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 - Website Building</title>
+        <style>
+            body {
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            #login-container {
+                width: 460px;
+                margin: 0 auto;
+            }
+
+            form label,
+            form input {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            form input {
+                padding: 8px;
+            }
+
+            form label {
+                font-weight: bold;
+            }
+
+            form div {
+                margin: 16px 0px;
+            }
+            
+.form-control.success input{
+    border-color: #2ecc71;
+
+}
+.form-control.error input {
+    border-color: #e74c3c;
+}
+.form-control.success i.fa-check-circle {
+color:#2ecc71;
+visibility: visible;
+}
+.form-control.error i.fa-check-circle {
+    color: #e74c3c;
+    visibility: visible; 
+    }
+
+        </style>
+        <script>
+            const form = document.getElementById('form');
+            const username = document.getElementById("username");
+            const password = document.getElementById("password" )
+            form.addEventListener("submit",(e) => {
+                e.preventDefault();
+                checkInputs();
+            });
+            
+        </script>
+    </head>
+
+    <body>
+
+        <div id="login-container">
+
+            <form>
+                <div>
+                    <form class="form" id="form">
+                        <div class="form-control success">
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="new_user" id="username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                        </form>
+                </div>
+            </div>
+                <div>
+                    <div class="form-control error">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="123456789" id="password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+</div>
+                </div>
+
+                <input type="submit" value="Login">
+            </form>
+
+        </div>
+
+    </body>
+</html>
